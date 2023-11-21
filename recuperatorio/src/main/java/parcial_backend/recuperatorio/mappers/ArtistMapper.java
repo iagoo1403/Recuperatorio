@@ -1,5 +1,7 @@
 package parcial_backend.recuperatorio.mappers;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import parcial_backend.recuperatorio.dtos.ArtistDTO;
 import parcial_backend.recuperatorio.entities.Artist;
 import parcial_backend.recuperatorio.entities.Album;
@@ -20,4 +22,5 @@ public class ArtistMapper {
     public Artist toEntity(ArtistDTO artistDTO){
         return Objects.isNull(artistDTO) ? null : modelMapper.map(artistDTO, Artist.class);
     }
+
 }

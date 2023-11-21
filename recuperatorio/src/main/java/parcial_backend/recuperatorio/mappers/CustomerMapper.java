@@ -1,5 +1,7 @@
 package parcial_backend.recuperatorio.mappers;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import parcial_backend.recuperatorio.dtos.CustomerDTO;
 import parcial_backend.recuperatorio.entities.Customer;
 import org.modelmapper.ModelMapper;
@@ -19,4 +21,5 @@ public class CustomerMapper {
     public Customer toEntity(CustomerDTO customerDTO){
         return Objects.isNull(customerDTO) ? null : modelMapper.map(customerDTO, Customer.class);
     }
+
 }

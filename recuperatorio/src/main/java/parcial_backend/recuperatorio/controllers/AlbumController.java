@@ -7,10 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.AlbumDTO;
-import parcial_backend.recuperatorio.dtos.ArtistDTO;
 import parcial_backend.recuperatorio.entities.Album;
 import parcial_backend.recuperatorio.services.AlbumService;
-import parcial_backend.recuperatorio.services.ArtistService;
+
 
 import java.util.List;
 
