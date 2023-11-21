@@ -1,4 +1,10 @@
 package parcial_backend.recuperatorio.repository;
 
-public interface CustomerRepository {
+import parcial_backend.recuperatorio.entities.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
+
 }
