@@ -21,6 +21,6 @@ public class Playlist_track {
     private Track trackId;
 
     @ManyToOne
-    @JoinColumn(name = "Playlist")
+    @JoinColumn(name = "PlaylistId")
     private Playlist playlistId;
 }

@@ -26,7 +26,7 @@ public class Track {
 
 
     @Column(name = "MediaTypeId")
-    private  Long mediaTypeIde;
+    private  Long mediaTypeId;
 
     @ManyToOne
     @JoinColumn(name = "GenreId")
@@ -35,8 +35,8 @@ public class Track {
     @Column(name = "Composer")
     private String composer;
 
-    @Column(name = "Miliseconds")
-    private String miliseconds;
+    @Column(name = "Milliseconds")
+    private Integer milliseconds;
 
     @Column(name = "Bytes")
     private Integer bytes;

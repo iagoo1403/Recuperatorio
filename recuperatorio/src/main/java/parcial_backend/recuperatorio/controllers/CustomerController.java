@@ -29,9 +29,9 @@ public class CustomerController {
 
     @GetMapping
     public ResponseEntity<List<Customer>> getAll(){
-        List<Customer> customer = customerService.getAll();
+        List<Customer> customers = customerService.getAll();
 
-        return ResponseEntity.ok(customer);
+        return ResponseEntity.ok(customers);
     }
 
     @PostMapping

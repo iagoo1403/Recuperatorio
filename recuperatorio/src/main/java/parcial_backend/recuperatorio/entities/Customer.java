@@ -39,7 +39,7 @@ public class Customer {
     @Column(name = "Country")
     private String coutry;
 
-    @Column(name = "PoatalCode")
+    @Column(name = "PostalCode")
     private String postalCode;
 
     @Column(name = "Phone")

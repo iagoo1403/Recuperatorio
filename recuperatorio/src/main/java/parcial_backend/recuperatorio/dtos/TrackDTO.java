@@ -16,7 +16,7 @@ public class TrackDTO {
     private Long mediaTypeId;
     private Long genreId;
     private String composer;
-    private String miliseconds;
+    private Integer miliseconds;
     private Integer bytes;
     private Double unitPrice;
     private Long trackId;

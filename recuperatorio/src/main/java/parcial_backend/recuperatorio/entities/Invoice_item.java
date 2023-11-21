@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Invoices_item")
+@Table(name = "Invoice_items")
 public class Invoice_item {
     @Id
     @Column(name = "InvoiceLineId")
