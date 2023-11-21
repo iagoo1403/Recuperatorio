@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(value = HttpStatus.CONFLICT)
 @Getter
 @Setter
-public class ResourceConflictException extends RuntimeException{
+public class ResourseConflictException extends RuntimeException{
     private String message;
 
-    public ResourceConflictException(String message) {
+    public ResourseConflictException(String message) {
         super(message);
         this.message = message;
     }
