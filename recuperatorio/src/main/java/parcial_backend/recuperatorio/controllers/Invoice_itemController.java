@@ -4,12 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.Invoice_itemDTO;
+import parcial_backend.recuperatorio.entities.Invoice_item;
 import parcial_backend.recuperatorio.services.Invoice_itemService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/invoice_item")
+@RequestMapping("/api/Invoice_item")
 public class Invoice_itemController {
 
     @Autowired
@@ -34,13 +35,13 @@ public class Invoice_itemController {
     }
 
     @PostMapping
-    public ResponseEntity<Invoice_item> save(@RequestBody InvoiceItemDTO invoiceItemDTO){
+    public ResponseEntity<Invoice_item> save(@RequestBody Invoice_itemDTO invoiceItemDTO){
         Invoice_item invoice_item = invoice_itemService.save(invoiceItemDTO);
         return ResponseEntity.ok(invoice_item);
     }
 
     @PutMapping("{id}")
-    ResponseEntity<Invoice_item> update(@PathVariable Long id, @RequestBody InvoiceItemDTO invoiceItemDTO){
+    ResponseEntity<Invoice_item> update(@PathVariable Long id, @RequestBody Invoice_itemDTO invoiceItemDTO){
         Invoice_item invoice_item = invoice_itemService.update(id, invoiceItemDTO);
 
         return ResponseEntity.ok(invoice_item);

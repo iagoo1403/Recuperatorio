@@ -19,5 +19,5 @@ public class Genre {
     private String name;
 
     @Column (name = "GenreId")
-    private Integer genreId;
+    private Long genreId;
 }

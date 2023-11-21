@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.GenreDTO;
+import parcial_backend.recuperatorio.entities.Genre;
 import parcial_backend.recuperatorio.services.GenreService;
 
 import java.util.List;

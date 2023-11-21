@@ -20,5 +20,5 @@ public class CustomerDTO {
     private String fax;
     private String email;
     private Long supportRepId;
-    private Long custmerId;
+    private Long customerId;
 }

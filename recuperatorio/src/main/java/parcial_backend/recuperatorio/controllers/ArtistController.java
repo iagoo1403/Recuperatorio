@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.ArtistDTO;
 import parcial_backend.recuperatorio.services.ArtistService;
-
+import parcial_backend.recuperatorio.entities.Artist;
 import java.util.List;
 
 @RestController
@@ -34,7 +34,7 @@ public class ArtistController {
     }
 
     @PostMapping
-    public ResponseEntity<Artist> save(@RequestBody ArtistDTO categoryDTO){
+    public ResponseEntity<Artist> save(@RequestBody ArtistDTO artistDTO){
         Artist artist = artistService.save(artistDTO);
         return  ResponseEntity.ok(artist);
     }

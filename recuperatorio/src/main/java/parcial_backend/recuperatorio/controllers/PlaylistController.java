@@ -4,12 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.PlaylistDTO;
+import parcial_backend.recuperatorio.entities.Playlist;
 import parcial_backend.recuperatorio.services.PlaylistService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/playlist")
+@RequestMapping("/api/Playlist")
 public class PlaylistController {
 
     @Autowired

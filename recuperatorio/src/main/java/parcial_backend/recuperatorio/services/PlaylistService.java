@@ -2,7 +2,7 @@ package parcial_backend.recuperatorio.services;
 
 import parcial_backend.recuperatorio.dtos.PlaylistDTO;
 import parcial_backend.recuperatorio.entities.Playlist;
-import parcial_backend.recuperatorio.exceptions.ResourceNotFoundException;
+import parcial_backend.recuperatorio.exceptions.ResourseNotFoundException;
 import parcial_backend.recuperatorio.exceptions.ResourseConflictException;
 import parcial_backend.recuperatorio.mappers.PlaylistMapper;
 import parcial_backend.recuperatorio.repository.PlaylistRepository;
@@ -45,7 +45,7 @@ public class PlaylistService {
         Playlist playlist = getById(id);
 
         if(playlist == null){
-            throw new ResourceNotFoundException("Playlist no registrado");
+            throw new ResourseNotFoundException("Playlist no registrado");
         }
 
         Playlist playlistUpdate = playlistMapper.toEntity(playlistDTO);
@@ -58,7 +58,7 @@ public class PlaylistService {
         Playlist playlist = getById(id);
 
         if(playlist == null){
-            throw new ResourceNotFoundException("Playlist no registrado");
+            throw new ResourseNotFoundException("Playlist no registrado");
         }
 
         playlistRepository.delete(playlist);

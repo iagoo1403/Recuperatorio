@@ -2,7 +2,7 @@ package parcial_backend.recuperatorio.services;
 
 import parcial_backend.recuperatorio.dtos.InvoiceDTO;
 import parcial_backend.recuperatorio.entities.Invoice;
-import parcial_backend.recuperatorio.exceptions.ResourceNotFoundException;
+import parcial_backend.recuperatorio.exceptions.ResourseNotFoundException;
 import parcial_backend.recuperatorio.exceptions.ResourseConflictException;
 import parcial_backend.recuperatorio.mappers.InvoiceMapper;
 import parcial_backend.recuperatorio.repository.InvoiceRepository;
@@ -45,7 +45,7 @@ public class InvoiceService {
         Invoice invoice = getById(id);
 
         if(invoice == null){
-            throw new ResourceNotFoundException("Invoice no registrado");
+            throw new ResourseNotFoundException("Invoice no registrado");
         }
 
         Invoice invoiceUpdate = invocieMapper.toEntity(invoiceDTO);
@@ -58,7 +58,7 @@ public class InvoiceService {
         Invoice invoice = getById(id);
 
         if(invoice == null){
-            throw new ResourceNotFoundException("Invoice no registrado");
+            throw new ResourseNotFoundException("Invoice no registrado");
         }
 
         invoiceRepository.delete(invoice);

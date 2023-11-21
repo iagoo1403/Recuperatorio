@@ -2,8 +2,8 @@ package parcial_backend.recuperatorio.services;
 
 import parcial_backend.recuperatorio.dtos.Playlist_trackDTO;
 import parcial_backend.recuperatorio.entities.Playlist_track;
-import parcial_backend.recuperatorio.exceptions.ResourceNotFoundException;
 import parcial_backend.recuperatorio.exceptions.ResourseConflictException;
+import parcial_backend.recuperatorio.exceptions.ResourseNotFoundException;
 import parcial_backend.recuperatorio.mappers.Playlist_trackMapper;
 import parcial_backend.recuperatorio.repository.Playlist_trackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,7 @@ public class Playlist_trackService {
         Playlist_track playlist_track = getById(id);
 
         if(playlist_track == null){
-            throw new ResourceNotFoundException("Playlist_track no registrado");
+            throw new ResourseNotFoundException("Playlist_track no registrado");
         }
 
         Playlist_track playlistTrackUpdate = playlist_trackMapper.toEntity(playlistTrackDTO);
@@ -58,7 +58,7 @@ public class Playlist_trackService {
         Playlist_track playlist_track = getById(id);
 
         if(playlist_track == null){
-            throw new ResourceNotFoundException("Playlist_track no registrado");
+            throw new ResourseNotFoundException("Playlist_track no registrado");
         }
 
         playlist_trackRepository.delete(playlist_track);

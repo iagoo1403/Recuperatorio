@@ -4,12 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.TrackDTO;
+import parcial_backend.recuperatorio.entities.Track;
 import parcial_backend.recuperatorio.services.TrackService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/track")
+@RequestMapping("/api/Track")
 public class TrackController {
 
     @Autowired

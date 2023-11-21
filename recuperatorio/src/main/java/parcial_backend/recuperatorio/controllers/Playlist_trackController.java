@@ -4,12 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.Playlist_trackDTO;
+import parcial_backend.recuperatorio.entities.Playlist_track;
 import parcial_backend.recuperatorio.services.Playlist_trackService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/playlist_track")
+@RequestMapping("/api/Playlist_track")
 public class Playlist_trackController {
 
     @Autowired
@@ -34,13 +35,13 @@ public class Playlist_trackController {
     }
 
     @PostMapping
-    public ResponseEntity<Playlist_track> save(@RequestBody PlaylistTrackDTO playlistTrackDTO){
+    public ResponseEntity<Playlist_track> save(@RequestBody Playlist_trackDTO playlistTrackDTO){
         Playlist_track playlist_track = playlist_trackService.save(playlistTrackDTO);
         return ResponseEntity.ok(playlist_track);
     }
 
     @PutMapping("{id}")
-    ResponseEntity<Playlist_track> update(@PathVariable Long id, @RequestBody PlaylistTrackDTO playlistTrackDTO){
+    ResponseEntity<Playlist_track> update(@PathVariable Long id, @RequestBody Playlist_trackDTO playlistTrackDTO){
         Playlist_track playlist_track = playlist_trackService.update(id, playlistTrackDTO);
 
         return ResponseEntity.ok(playlist_track);

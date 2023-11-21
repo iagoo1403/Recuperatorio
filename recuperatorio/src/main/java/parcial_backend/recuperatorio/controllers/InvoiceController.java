@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import parcial_backend.recuperatorio.dtos.InvoiceDTO;
+import parcial_backend.recuperatorio.entities.Invoice;
 import parcial_backend.recuperatorio.services.InvoiceService;
 
 import java.util.List;

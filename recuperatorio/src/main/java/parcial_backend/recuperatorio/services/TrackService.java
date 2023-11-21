@@ -2,7 +2,7 @@ package parcial_backend.recuperatorio.services;
 
 import parcial_backend.recuperatorio.dtos.TrackDTO;
 import parcial_backend.recuperatorio.entities.Track;
-import parcial_backend.recuperatorio.exceptions.ResourceNotFoundException;
+import parcial_backend.recuperatorio.exceptions.ResourseNotFoundException;
 import parcial_backend.recuperatorio.exceptions.ResourseConflictException;
 import parcial_backend.recuperatorio.mappers.TrackMapper;
 import parcial_backend.recuperatorio.repository.TrackRepository;
@@ -45,7 +45,7 @@ public class TrackService {
         Track track = getById(id);
 
         if(track == null){
-            throw new ResourceNotFoundException("Track no registrado");
+            throw new ResourseNotFoundException("Track no registrado");
         }
 
         Track trackUpdate = trackMapper.toEntity(trackDTO);
@@ -58,7 +58,7 @@ public class TrackService {
         Track track = getById(id);
 
         if(track == null){
-            throw new ResourceNotFoundException("Track no registrado");
+            throw new ResourseNotFoundException("Track no registrado");
         }
 
         trackRepository.delete(track);

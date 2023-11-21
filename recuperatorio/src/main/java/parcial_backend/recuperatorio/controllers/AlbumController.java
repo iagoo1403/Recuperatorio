@@ -15,7 +15,7 @@ import parcial_backend.recuperatorio.services.ArtistService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/Artist")
+@RequestMapping("/api/Album")
 public class AlbumController {
     @Autowired
     private AlbumService albumService;
@@ -25,7 +25,7 @@ public class AlbumController {
         Album album = albumService.getById(id);
 
         if(album != null){
-            return ResponseEntity.ok(category);
+            return ResponseEntity.ok(album);
         }
 
         return ResponseEntity.notFound().build();
@@ -45,8 +45,8 @@ public class AlbumController {
     }
 
     @PutMapping("{id}")
-    ResponseEntity<Album> update(@PathVariable Long id,@RequestBody ArtistDTO artistDTO){
-        Album album = albumService.update(id, artistDTO);
+    ResponseEntity<Album> update(@PathVariable Long id,@RequestBody AlbumDTO albumDTO){
+        Album album = albumService.update(id, albumDTO);
 
         return ResponseEntity.ok(album);
     }
